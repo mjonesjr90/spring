@@ -17,6 +17,10 @@ jar{
     version = '0.1.0'
 }
 
+repositories{
+   mavenCentral()
+}
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -25,4 +29,8 @@ dependencies{
     compile("org.springframework:spring-web")
     compile("com.fasterxml.jackson.core:jackson-databind")
     testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+   gradleVersion = '3.0' //version required
 }
